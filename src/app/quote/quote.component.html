@@ -1,1 +1,14 @@
-<p>quote works!</p>
+<div class="" id="QuoteHolder">
+    
+    <hr>
+    <app-quote-form></app-quote-form>
+    <hr>
+    <h2>Amazing and Hillarious Quotes!</h2>
+    <ul>
+        <div *ngFor='let quote of quotes; let i = index'>
+            <li>Quote: {{quote.name}}</li>
+            <button (click)='toggleDetails(i)'>Toggle Details</button>
+            <app-quote-detail *ngIf='quote.showQuote' [quote]='quote'  (isComplete) = 'deleteQuote($event,i)'>></app-quote-detail>
+        </div>
+    </ul>
+</div>
