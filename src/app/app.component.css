@@ -1,0 +1,10 @@
+.toolbar {
+  position: absolute;
+  padding: 2% 25%;
+  align-items: center;
+  font-weight: 900;
+}
+
+.col-md-12 {
+  display: flex;
+}

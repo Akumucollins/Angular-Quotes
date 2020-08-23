@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee+Shade&family=Faster+One&family=Jacques+Francois+Shadow&family=Londrina+Outline&family=Nosifer&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
