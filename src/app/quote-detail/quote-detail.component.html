@@ -1,1 +1,4 @@
-<p>quote-detail works!</p>
+<p>Author: {{quote.author}} </p>
+<p>publisher: {{quote.publisher}} </p>
+<p>Published: {{quote.publishDate | dateAgo}}</p>
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-success">Delete Quote</button>
