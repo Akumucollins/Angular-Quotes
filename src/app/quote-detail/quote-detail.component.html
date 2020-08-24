@@ -2,4 +2,11 @@
 <p>Author: {{quote.author}} </p>
 <p>publisher: {{quote.publisher}} </p>
 <p>Published: {{quote.publishDate | dateAgo}}</p>
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-success">Delete Quote</button>
+<!-- <button style="margin-left:0px;" class="btn btn-outline-success" (click)='upVote($event)'> {{quote.upVote}} <i
+    class="fa fa-thumbs-up" aria-hidden="true"></i></button> -->
+<!-- <button (click)= 'quoteDelete(true)' class="btn btn-outline-success">Delete Quote</button> -->
+<!-- <button style="margin-left:0px;" class="btn btn-outline-warning" (click)='downVote($event)'>{{quote.downVote}} <i
+    class="fa fa-thumbs-down" aria-hidden="true"></i></button> -->    
+    <button class="btn btn-primary" (click)='upVote()'> upVote <span>{{upVotes}}</span></button>
+    <button (click)= 'quoteDelete(true)' class="btn btn-outline-success">Delete Quote</button>
+    <button class="btn btn-primary" (click)='downVote()'> downVote <span>{{downVotes}}</span></button>
