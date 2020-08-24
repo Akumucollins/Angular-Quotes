@@ -22,8 +22,15 @@ export class QuoteComponent implements OnInit {
 
   }
 
-  toggleDetails(index) {
-    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  thumbUp:number=0;
+  upVote(){
+    this.thumbUp++;
+
+  }
+  thumbDown:number=0;
+  downVote(){
+    this.thumbDown++;
+
   }
 
   deleteQuote(isComplete, index) {
@@ -38,7 +45,7 @@ export class QuoteComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }

@@ -1,55 +1,52 @@
 <div class="" id="QuoteHolder">
-
     <hr>
     <app-quote-form (postQuote)="addNewQuote($event)"></app-quote-form>
     <hr>
     <h2>Amazing and Hillarious Quotes!</h2>
-    <ul>
-        <div *ngFor='let quote of quotes; let i = index'>
-            <li>Quote: {{quote.name}}</li>
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showQuote' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-            </app-quote-detail>
-        </div>
-    </ul>
 </div>
 
-
-<section class="container">
-
-    <div class="row active-with-click">
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <article class="material-card Red">
-                <h2>
-                    <span>Amazing and Hillarious Quotes!</span>
-                    <strong>
-                        <i class="fa fa-fw fa-magic"></i>
-                        Qui Maleficus
-                    </strong>
-                </h2>
-                <div class="mc-content">
-                    <div class="img-container">
-                        <img class="img-responsive" src="https://wpdmcdn.s3.amazonaws.com/me.jpg">
+<div class="section">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card profile-card-2" *ngFor='let quote of quotes; let i = index'>
+                    <div class="card-img-block">
+                        <img class="img-fluid"
+                            src="https://images.pexels.com/photos/877695/pexels-photo-877695.jpeg?auto=compress&cs=tinysrgb&h=350"
+                            alt="Card image cap" />
                     </div>
-                    <div class="mc-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. ...
+                    <div class="card-body pt-5">
+                        <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="profile-image"
+                            class="profile" />
+                        <h4 class="card-title pl-5">
+                            {{quote.category}}
+                        </h4>
+                        <h5 class="card-subtitle">
+                            <i class="fas fa-quote-left"></i>
+                             {{quote.name}}
+                             <i class="fas fa-quote-right"></i>
+                        </h5>
+                        <p class="card-text">
+                            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+                            </app-quote-detail>
+                        </p>
+                        <div class="button-block">
+                            <div style="margin-left: 30px;">
+                                <button class="btn btn-primary" (click)='upVote()'><i class="fa fa-thumbs-up"
+                                    aria-hidden="true"></i>{{thumbUp}}</button>
+                            </div>
+                            <div style="margin-left: 12px;">
+                                <button (click)='quoteDelete(true)' class="btn btn-outline-success">Delete
+                                    Quote</button>
+                            </div>
+                            <div style="margin-left: 12px;">
+                                <button class="btn btn-primary" (click)='downVote()'><i class="fa fa-thumbs-down"
+                                    aria-hidden="true"></i>{{thumbDown}}</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <div class="mc-footer">
-                    <h4>
-                        Social
-                    </h4>
-                    <a target=_parent href="https://www.wpdownloadmanager.com/" class="fa fa-fw fa-facebook"></a>
-                    <a target=_parent href="https://www.wpdownloadmanager.com/" class="fa fa-fw fa-twitter"></a>
-                    <a target=_parent href="https://www.wpdownloadmanager.com/" class="fa fa-fw fa-linkedin"></a>
-                    <a target=_parent href="https://www.wpdownloadmanager.com/" class="fa fa-fw fa-google-plus"></a>
-                </div>
-            </article>
+            </div>
         </div>
-
     </div>
-</section> -->
+</div>
