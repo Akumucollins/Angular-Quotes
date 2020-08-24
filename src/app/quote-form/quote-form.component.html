@@ -10,7 +10,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Enter Your Name Here..." type="text" id="publisher"
+                    <input class="form-control" placeholder="Enter Your Name Here..." type="text" id="publisher"
                         [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel" required>
                     <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
                         <p> Your Name is required</p>
