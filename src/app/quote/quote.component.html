@@ -2,40 +2,41 @@
     <hr>
     <app-quote-form (postQuote)="addNewQuote($event)"></app-quote-form>
     <hr>
-    <h2 class="text-center" style="font-size: 34px;font-family: 'Nosifer', cursive;font-weight: bolder;color: #fbaa33;">Amazing and Hillarious Quotes!</h2>
+    <h2 class="text-center" style="font-size: 34px;font-family: 'Nosifer', cursive;font-weight: bolder;color: #fbaa33;">
+        Amazing and Hillarious Quotes!</h2>
 </div>
 
 <div class="section">
-    <div class="container text-center">
-        <div class="row text-center">
-            <div class="card profile-card-2" *ngFor='let quote of quotes; let i = index'>
-                <div class="card-body pt-5">
-                    <h4 class="card-title">
-                        {{quote.category}}
-                    </h4>
-                    <h5 class="card-subtitle">
-                        <i class="fas fa-quote-left"></i>
-                        {{quote.name}}
-                        <i class="fas fa-quote-right"></i>
-                    </h5>
-                    <br>
-                    <h6 class="card-text">
-                        <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-                        </app-quote-detail>
-                    </h6>
-                    <div class="button-block text-center">
-                        <div style="margin-left: 0px;">
-                            <button class="btn btn-primary" (click)='upVote()'><i class="fa fa-thumbs-up"
-                                    aria-hidden="true"></i>{{thumbUp}}</button>
-                        </div>
-                        <div style="margin-left: 25px;">
-                            <button (click)='quoteDelete(true)' class="btn btn-outline-success">Delete
-                                Quote</button>
-                        </div>
-                        <div style="margin-left: 25px;">
-                            <button class="btn btn-primary" (click)='downVote()'><i class="fa fa-thumbs-down"
-                                    aria-hidden="true"></i>{{thumbDown}}</button>
-                        </div>
+    <div class="container text-center" *ngFor='let quote of quotes; let i = index'>
+        <div class="card profile-card-2">
+            <div class="card-body pt-2">
+                <h4 class="card-title" style="font-family: 'Jacques Francois Shadow';font-size: 35px;">
+                    {{quote.category}}
+                </h4>
+                <hr>
+                <h5 class="card-subtitle">
+                    <i class="fas fa-quote-left"></i>
+                    {{quote.name}}
+                    <i class="fas fa-quote-right"></i>
+                </h5>
+                <hr>
+                <h6 class="card-text">
+                    <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+                    </app-quote-detail>
+                </h6>
+                <hr>
+                <div class="button-block text-center">
+                    <div style="margin-left: 0px;">
+                        <button class="btn btn-outline-warning" (click)='upVote()'><i class="fa fa-thumbs-up"
+                                aria-hidden="true"></i>{{thumbUp}}</button>
+                    </div>
+                    <div style="margin-left: 25px;">
+                        <button (click)='quoteDelete(true)' class="btn btn-outline-success">Delete
+                            Quote</button>
+                    </div>
+                    <div style="margin-left: 25px;">
+                        <button class="btn btn-outline-warning" (click)='downVote()'><i class="fa fa-thumbs-down"
+                                aria-hidden="true"></i>{{thumbDown}}</button>
                     </div>
                 </div>
             </div>
