@@ -9,8 +9,8 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(2, 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.', 'Programming Quote', 'Rick Cook', 'Akumu Collins', new Date(1567, 3, 14)),
-    new Quote(1, 'If debugging is the process of removing software bugs, then programming must be the process of putting them in.', 'Programming Quote', 'Edsger Dijkstra', 'Akumu Collins', new Date(1975, 3, 14)),
+    new Quote(2, 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.', 'Programming Quote', 'Rick Cook', 'Akumu Collins', new Date(1767, 3, 14)),
+    new Quote(1, 'Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.', 'Love Quote', 'Maya Angelou', 'Adrian Omondi', new Date(1859, 3, 14)),
   ];
 
 
