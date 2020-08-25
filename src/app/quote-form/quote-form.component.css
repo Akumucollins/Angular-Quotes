@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee+Shade&family=Faster+One&family=Jacques+Francois+Shadow&family=Londrina+Outline&family=Nosifer&display=swap');
+
+label{
+ font-size: 22px;
+ font-family: 'Faster One', cursive;
+
+}
+h4{
+    font-family: 'Nosifer', cursive;
+    font-size: 35px;
+    color: antiquewhite;
+}
+
+ ::placeholder{
+    color: #fbaa33;
+    font-family: 'Poppins', sans-serif;
+}
