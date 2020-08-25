@@ -1,9 +1,26 @@
-<p style="font-family: 'Faster One', cursive;font-size: 25px;">Author: 
-    <span style="font-family: 'Nosifer', cursive;font-size: 16px; color: #fba33f;">{{quote.author}} </span>
-</p>
-<p style="font-family: 'Faster One', cursive;font-size: 25px;">publisher: 
-    <span style="font-family: 'Nosifer', cursive;font-size: 16px; color: #fba33f;">{{quote.publisher}} </span>
-</p>
-<p style="font-family: 'Faster One', cursive;font-size: 25px;">Published: 
-    <span style="font-family: 'Nosifer', cursive;font-size: 16px; color: #fba33f;">{{quote.publishDate | dateAgo}}</span>
-</p>
+<h6 class="card-text pl-5 ml-5 pt-1">
+    <p style="font-family: 'Faster One', cursive;font-size: 25px;">Author: 
+        <span style="font-family: 'Nosifer', cursive;font-size: 20px; color: #fba33f;">{{quote.author}} </span>
+    </p>
+    <p style="font-family: 'Faster One', cursive;font-size: 25px;">publisher: 
+        <span style="font-family: 'Nosifer', cursive;font-size: 20px; color: #fba33f;">{{quote.publisher}} </span>
+    </p>
+    <p style="font-family: 'Faster One', cursive;font-size: 25px;">Published: 
+        <span style="font-family: 'Nosifer', cursive;font-size: 20px; color: #fba33f;">{{quote.publishDate | dateAgo}}</span>
+    </p>
+</h6>
+<hr>
+<div class="button-block text-center">
+    <button id="upVote" class="btn btn-outline-success" (click)='upVote()' style="font-family: 'Nosifer', cursive;">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+        Like {{thumbUp}}
+    </button>
+    <button (click)='quoteDelete(true)' class="btn btn-outline-danger" style="font-family: 'Nosifer', cursive;">
+        <span class="fa fa-trash"></span>
+        DeleteQuote
+    </button>
+    <button class="btn btn-outline-danger" (click)='downVote()' style="font-family: 'Nosifer', cursive;">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+        Dislike {{thumbDown}}
+    </button>
+</div> 

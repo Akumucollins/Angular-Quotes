@@ -1,0 +1,11 @@
+.button-block {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-text {
+  font-weight: 300;
+  font-size: 15px;
+}

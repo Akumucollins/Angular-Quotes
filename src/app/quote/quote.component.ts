@@ -22,26 +22,21 @@ export class QuoteComponent implements OnInit {
 
   }
 
-  thumbUp = 0;
-  thumbDown = 0;
-
-  upVote(){
-    this.thumbUp += 1;
-
-  }
-  
-  downVote(){
-    this.thumbDown += 1;
-
+  toggleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  quoteDelete( index){
-    this.quotes.splice(index, 1);
+  deleteQuote(isComplete, index) {
+    let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+
+    if (toDelete) {
+      this.quotes.splice(index, 1);
+    }
   }
 
   constructor() { }
 
-  ngOnInit(){
+  ngOnInit() {
   }
 
 }
