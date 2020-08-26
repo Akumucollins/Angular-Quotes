@@ -20,15 +20,15 @@ export class QuoteDetailComponent implements OnInit {
   thumbDown = 0;
 
   upVote(){
-    this.thumbUp += 1;
+    this.quote.thumbUp += 1;
 
   }
   
   downVote(){
-    this.thumbDown += 1;
+    this.quote.thumbDown += 1;
 
   }
-  
+
   constructor() { }
 
   ngOnInit() {

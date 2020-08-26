@@ -34,6 +34,22 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+  initialVote : number;
+  finalVote : number;
+  counter : number;
+
+  highestVotes(){
+    this.initialVote = 0;
+    this.finalVote = 0;
+
+    for(this.counter = 0 ; this.counter < this.quotes.length; this.counter++){
+      this.finalVote = this.quotes[this.counter].thumbDown;
+      if(this.finalVote > this.initialVote){this.initialVote = this.finalVote}
+    }
+    return this.initialVote ;
+  }
+
+
   constructor() { }
 
   ngOnInit() {
