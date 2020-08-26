@@ -39,7 +39,7 @@ export class QuoteComponent implements OnInit {
     this.finalVote = 0;
 
     for(this.counter = 0 ; this.counter < this.quotes.length; this.counter++){
-      this.finalVote = this.quotes[this.counter].thumbDown;
+      this.finalVote = this.quotes[this.counter].thumbUp;
       if(this.finalVote > this.initialVote){this.initialVote = this.finalVote}
     }
     return this.initialVote ;

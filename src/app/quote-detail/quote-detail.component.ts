@@ -21,12 +21,10 @@ export class QuoteDetailComponent implements OnInit {
 
   upVote(){
     this.quote.thumbUp += 1;
-
   }
   
   downVote(){
     this.quote.thumbDown += 1;
-
   }
 
   constructor() { }

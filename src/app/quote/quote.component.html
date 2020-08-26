@@ -14,7 +14,12 @@
                         {{quote.category}}
                     </h4>
                     <hr>
-                    <h5 class="">
+                    <h5 class="myQuote" appHighlight *ngIf="highestVotes() === quote.thumbUp && quote.thumbUp > 4">
+                        <i class="fas fa-quote-left"></i>
+                        {{quote.name}}
+                        <i class="fas fa-quote-right"></i>
+                    </h5>
+                      <h5 class="myQuote" appHighlight *ngIf="highestVotes() === quote.thumbUp && quote.thumbUp > 4">
                         <i class="fas fa-quote-left"></i>
                         {{quote.name}}
                         <i class="fas fa-quote-right"></i>
