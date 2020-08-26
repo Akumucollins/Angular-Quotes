@@ -15,11 +15,7 @@ export class QuoteComponent implements OnInit {
 
 
   addNewQuote(emittedQoute) {
-    // let quoteLength = this.quotes.length;
-    // quote.id = quoteLength + 1;
-    // quotePublishDate = new Date(quotePublishDate)
     this.quotes.push(emittedQoute)
-
   }
 
   toggleDetails(index) {

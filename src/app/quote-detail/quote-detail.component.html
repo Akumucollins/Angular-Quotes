@@ -13,7 +13,7 @@
 <div class="button-block text-center">
     <button class="btn btn-outline-success" (click)='upVote()'>
         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-        Like {{thumbUp}}
+        Like {{quote.thumbUp}}
     </button>
     <button (click)='quoteDelete(true)' class="btn btn-outline-danger">
         <span class="fa fa-trash"></span>
@@ -21,6 +21,6 @@
     </button>
     <button class="btn btn-outline-danger" (click)='downVote()'>
         <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-        Dislike {{thumbDown}}
+        Dislike {{quote.thumbDown}}
     </button >
 </div> 
