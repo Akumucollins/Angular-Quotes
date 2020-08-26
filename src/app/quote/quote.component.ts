@@ -8,17 +8,17 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
-  quotes: Quote[] = [
+  quotes = [
     new Quote(2, 'Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the universe trying to produce bigger and better idiots. So far, the universe is winning.', 'Programming Quote', 'Rick Cook', 'Akumu Collins', new Date(1767, 3, 14)),
     new Quote(1, 'Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope.', 'Love Quote', 'Maya Angelou', 'Adrian Omondi', new Date(1859, 3, 14)),
   ];
 
 
-  addNewQuote(quote) {
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength + 1;
-    quote.publishDate = new Date(quote.publishDate)
-    this.quotes.push(quote)
+  addNewQuote(emittedQoute) {
+    // let quoteLength = this.quotes.length;
+    // quote.id = quoteLength + 1;
+    // quotePublishDate = new Date(quotePublishDate)
+    this.quotes.push(emittedQoute)
 
   }
 

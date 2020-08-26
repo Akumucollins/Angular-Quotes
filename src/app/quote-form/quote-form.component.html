@@ -11,11 +11,8 @@
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
                         <input class="form-control clearFields" placeholder="Enter Your Name Here..." type="text"
-                            id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher="ngModel"
+                            id="publisher" [(ngModel)]="quotePublisher" name="publisher" #publisher="ngModel"
                             required>
-                    </div>
-                    <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
-                        <p> Your Name is required</p>
                     </div>
                 </div>
                 <div class="form-group">
@@ -25,10 +22,7 @@
                             <span class="input-group-text"> <i class="fas fa-sitemap"></i> </span>
                         </div>
                         <input class="form-control clearFields" placeholder="Enter Quote Category Here..." type="text"
-                            id="category" [(ngModel)]="newQuote.category" name="category" #category="ngModel" required>
-                    </div>
-                    <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
-                        <p>Quote Category is required</p>
+                            id="category" [(ngModel)]="quoteCategory" name="category" #category="ngModel" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -39,10 +33,7 @@
                                     class="fas fa-quote-l"></i> </span>
                         </div>
                         <input class="form-control clearFields" placeholder="Enter Quote Category Here..." type="text"
-                            id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
-                    </div>
-                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                        <p> Your Quote is required</p>
+                            id="name" [(ngModel)]="quoteName" name="name" #name="ngModel" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -52,11 +43,9 @@
                             <span class="input-group-text"> <i class="fas fa-user"></i></span>
                         </div>
                         <input class="form-control clearFields" placeholder="Enter Authors' Name Here..." type="text"
-                            id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+                            id="author" [(ngModel)]="quoteAuthor" name="author" #author="ngModel" required>
                     </div>
-                    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                        <p>Author is required</p>
-                    </div>
+                   
                 </div>
                 <div class="form-group">
                     <label for="author">Published Date</label>
@@ -65,15 +54,12 @@
                             <span class="input-group-text"> <i class="fas fa-calendar-check"></i> </span>
                         </div>
                         <input class="form-control clearFields" placeholder="Enter Published Date Here..." type="date"
-                            id="publishDate" [(ngModel)]="newQuote.publishDate" name="publishDate"
+                            id="publishDate" [(ngModel)]="quotePublishDate" name="publishDate"
                             #publishDate="ngModel" required>
-                    </div>
-                    <div [hidden]="publishDate.valid || publishDate.pristine" class="alert alert-danger">
-                        <p>Date is required</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-outline-success btn-block" onclick="resetForm();"> Post Quote </button>
+                    <button type="submit" class="btn btn-outline-success btn-block" > Post Quote </button>
                 </div>
             </form>
 
